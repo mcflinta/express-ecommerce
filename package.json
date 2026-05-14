@@ -1,0 +1,49 @@
+{
+  "name": "express-ecommerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon",
+    "dev": "nodemon",
+    "start:debug": "nodemon --inspect=9229 -e ts,tsx --exec node -r ts-node/register -r tsconfig-paths/register ./src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcflinta/express-ecommerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mcflinta/express-ecommerce/issues"
+  },
+  "homepage": "https://github.com/mcflinta/express-ecommerce#readme",
+  "dependencies": {
+    "@prisma/client": "^7.8.0",
+    "dotenv": "^17.4.2",
+    "ejs": "^5.0.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.7.0",
+    "nodemon": "^3.1.14",
+    "prisma": "^7.8.0",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^6.0.3"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src"
+    ],
+    "ext": "ts",
+    "ignore": [
+      "node_modules"
+    ],
+    "exec": "ts-node -r tsconfig-paths/register ./src/app.ts"
+  }
+}
